@@ -1,0 +1,14 @@
+app.zip
+node_modules/*
+.yarn/*
+out/*
+*.DS_Store
+.idea/*
+*/mochawesome-report/*
+.vscode/*
+package/*
+package*.zip
+components/DevCycle/DevCycle.brs
+test-app.zip
+tests/sample/channel.zip
+tests/jsLibrary/mochawesome-report/*
