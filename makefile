@@ -9,6 +9,8 @@ zip:
 
 VERSION := $(if $(VERSION),$(VERSION),0.0.0)
 
+VERSION := $(if $(VERSION),$(VERSION),0.0.0)
+
 bundle:
 	@touch components/DevCycle/DevCycle.brs
 	@find components/DevCycle -name "*.brs" | grep -vE "Task|DevCycle\.brs" | xargs cat > components/DevCycle/DevCycle.brs
@@ -17,19 +19,17 @@ bundle:
 	@cp -r components/DevCycle/DevCycleTask.brs package/DevCycleTask.brs
 	@cp -r components/DevCycle/DevCycleTask.xml package/DevCycleTask.xml
 	@if [ "$(shell uname)" = "Darwin" ]; then \
-		sed -i '' '\
-		/uri="pkg:\/components\/DevCycle\/DevCycleSGClient.brs"/d; \
-		/uri="pkg:\/components\/DevCycle\/DevCycleUser.brs"/d; \
-		/uri="pkg:\/components\/DevCycle\/DevCycleOptions.brs"/d; \
-		s/uri="pkg:\/components\/DevCycle\/DevCycleClient.brs"/uri="pkg:\/components\/DevCycle\/DevCycle.brs"/; \
-		' package/DevCycleTask.xml; \
+		sed -i '' -e '/uri="pkg:\/components\/DevCycle\/DevCycleSGClient.brs"/d' \
+			-e '/uri="pkg:\/components\/DevCycle\/DevCycleUser.brs"/d' \
+			-e '/uri="pkg:\/components\/DevCycle\/DevCycleOptions.brs"/d' \
+			-e 's|uri="pkg:\/components\/DevCycle\/DevCycleClient.brs"|uri="pkg:\/components\/DevCycle\/DevCycle.brs"|g' \
+			package/DevCycleTask.xml; \
 	else \
-		sed -i '\
-		/uri="pkg:\/components\/DevCycle\/DevCycleSGClient.brs"/d; \
-		/uri="pkg:\/components\/DevCycle\/DevCycleUser.brs"/d; \
-		/uri="pkg:\/components\/DevCycle\/DevCycleOptions.brs"/d; \
-		s/uri="pkg:\/components\/DevCycle\/DevCycleClient.brs"/uri="pkg:\/components\/DevCycle\/DevCycle.brs"/; \
-		' package/DevCycleTask.xml; \
+		sed -i -e '/uri="pkg:\/components\/DevCycle\/DevCycleSGClient.brs"/d' \
+			-e '/uri="pkg:\/components\/DevCycle\/DevCycleUser.brs"/d' \
+			-e '/uri="pkg:\/components\/DevCycle\/DevCycleOptions.brs"/d' \
+			-e 's|uri="pkg:\/components\/DevCycle\/DevCycleClient.brs"|uri="pkg:\/components\/DevCycle\/DevCycle.brs"|g' \
+			package/DevCycleTask.xml; \
 	fi
 	@zip -r package-$(VERSION).zip package
 	
