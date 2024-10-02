@@ -14,7 +14,7 @@
 //////////////////////////////////////////////////////////////////////////
 
 const rokuLibrary = require('../library/rokuLibrary')
-const expect = require('chai').expect
+const { expect } = require('chai')
 const { spawn } = require('child_process')
 
 const childProcess = spawn('../bin/RokuWebDriver_mac')
