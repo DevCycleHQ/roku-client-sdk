@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene"> 
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <script
+    type="text/brightscript"
+    uri="pkg:/components/DevCycle/DevCycle.brs"
+  />
+	<children>
+		<LayoutGroup id="mainLayout" layoutDirection="vert">
+			<Label
+        id="myLabel"
+        text="DevCycle Test App!"
+        width="1920"
+        height="220"
+        horizAlign="center"
+        vertAlign="center"
+      />
+      <LayoutGroup id="mainContentLayout" layoutDirection="horiz">
+        <ButtonGroup
+          id="buttonGroup"
+          layoutDirection="vert"
+          vertAlignment="top"
+          horizAlignment="left"
+          itemSpacings="[0]"
+        />
+        <LayoutGroup
+          id="labelLayout"
+          layoutDirection="vert"
+          itemSpacings="[15]"
+        >
+      <Label
+            id="configData"
+            width="1920"
+            height="100"
+            numLines="10"
+            wrap="true"
+            text="No Config Data"
+          />
+      <Label
+            id="variablesData"
+            width="1920"
+            height="100"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+      <Label
+            id="featuresData"
+            width="1920"
+            height="50"
+            numLines="5"
+            wrap="true"
+            text="No Features Data"
+          />
+      <Label
+            id="jsonVar"
+            width="1920"
+            height="20"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+      <Label
+            id="numVar"
+            width="1920"
+            height="20"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+      <Label
+            id="stringVar"
+            width="1920"
+            height="20"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+      <Label
+            id="booleanVar"
+            width="1920"
+            height="20"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+      <Label
+            id="undefinedVar"
+            width="1920"
+            height="20"
+            numLines="5"
+            wrap="true"
+            text="No Variables Data"
+          />
+
+      
+      <Rectangle
+            id="booleanSquare"
+            width="200"
+            height="200"
+            color="0x0000FFFF"
+          />
+          <Label
+            id="buttonPressedLabel"
+            width="1280"
+            height="20"
+            numLines="1"
+            wrap="true"
+            text="No Button Pressed"
+          />
+          <Label
+            id="resultLabel"
+            width="1280"
+            height="20"
+            numLines="1"
+            wrap="true"
+            text="No Features Data"
+          />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+    <DevCycleTask id="devCycleTask" />
+    </children>
+</component>

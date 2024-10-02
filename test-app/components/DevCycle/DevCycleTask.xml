@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DevCycleTask" extends="Task">
+  <script type="text/brightscript" uri="pkg:/components/DevCycle/DevCycleTask.brs" />
+  <script type="text/brightscript" uri="pkg:/components/DevCycle/DevCycle.brs" />
+  <interface>
+    <field id="config" type="assocarray" />
+    <field id="options" type="assocarray" />
+    <field id="sdkKey" type="string" />
+    <field id="user" type="assocarray" />
+    <field id="variables" type="assocarray" />
+    <field id="features" type="assocarray" />
+    <field id="client" type="assocarray" />
+    <field id="numCalls" type="integer" />
+    <field id="initialized" type="boolean" value="false" />
+    <field id="identifyUser" type="boolean" value="false" />
+    <field id="resetUser" type="boolean" value="false" />
+    <field id="track" type="assocarray"/>
+    <field id="flush" type="boolean" value="false" />
+  </interface>
+</component>
