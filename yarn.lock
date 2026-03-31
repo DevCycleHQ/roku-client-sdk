@@ -327,7 +327,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.13.6":
+"axios@npm:1.13.6":
   version: 1.13.6
   resolution: "axios@npm:1.13.6"
   dependencies:
@@ -2679,7 +2679,7 @@ __metadata:
   resolution: "roku-client-sdk@workspace:."
   dependencies:
     "@rokucommunity/bslint": "npm:^0.8.38"
-    axios: "npm:^1.13.6"
+    axios: "npm:1.13.6"
     brighterscript: "npm:^0.70.3"
     chai: "npm:^4.5.0"
     form-data: "npm:4.0.5"
