@@ -48,7 +48,7 @@ jobs:
         run: make bundle VERSION=${{ steps.prepare-release.outputs.next-release-tag }}
 
       - name: Upload package.zip
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: package
           path: package-${{ steps.prepare-release.outputs.next-release-tag }}.zip
