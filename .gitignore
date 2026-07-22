@@ -12,3 +12,4 @@ components/DevCycle/DevCycle.brs
 test-app.zip
 tests/sample/channel.zip
 tests/jsLibrary/mochawesome-report/*
+.worktrees/
