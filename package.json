@@ -9,7 +9,7 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
-    "axios": "1.16.0",
+    "axios": "1.18.0",
     "chai": "^4.5.0",
     "form-data": "4.0.6",
     "mocha": "11.7.5",
@@ -30,10 +30,13 @@
     "postman-request/tough-cookie": "4.1.4",
     "lodash": "4.18.1",
     "picomatch": "4.0.4",
-    "brace-expansion": "5.0.6",
+    "brace-expansion": "5.0.7",
     "follow-redirects": "1.16.0",
     "socks": "2.8.9",
     "ip-address": "10.2.0",
-    "tar": "7.5.16"
+    "tar": "7.5.16",
+    "js-yaml": "4.2.0",
+    "uuid": "11.1.1",
+    "roku-deploy": "3.18.2"
   }
 }
