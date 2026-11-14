@@ -72,7 +72,7 @@ function DevCycleUser(user as Object) as Object
     populatedUser["platform"] = "roku"
     populatedUser["deviceModel"] = createObject("roDeviceInfo").GetModel()
     populatedUser["sdkType"] = "mobile"
-    populatedUser["sdkVersion"] = "0.0.0"
+    populatedUser["sdkVersion"] = "1.0.1" ' x-release-please-version
 
     if user.email <> invalid
         populatedUser["email"] = user.email
