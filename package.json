@@ -1,6 +1,6 @@
 {
   "name": "roku-client-sdk",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "repository": "git@github.com:DevCycleHQ-Sandbox/roku-client-sdk.git",
   "license": "MIT",
   "scripts": {
